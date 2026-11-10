@@ -114,5 +114,4 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// Инициализация состояния кнопки при загрузке
 updateSubmitButtonState();
