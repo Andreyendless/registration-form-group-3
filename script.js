@@ -107,6 +107,23 @@ confirmInput.addEventListener('input', () => {
   updateSubmitButtonState();
 });
 
+// У каждого поля независимый переключатель видимости.
+function setupPasswordToggle(button, input, fieldName) {
+  button.addEventListener('click', () => {
+    const isVisible = input.type === 'password';
+    input.type = isVisible ? 'text' : 'password';
+
+    button.classList.toggle('is-visible', isVisible);
+    button.setAttribute('aria-pressed', String(isVisible));
+    const label = `${isVisible ? 'Скрыть' : 'Показать'} ${fieldName}`;
+    button.setAttribute('aria-label', label);
+    button.title = label;
+  });
+}
+
+setupPasswordToggle(document.getElementById('togglePassword'), passwordInput, 'пароль');
+setupPasswordToggle(document.getElementById('toggleConfirmPassword'), confirmInput, 'подтверждение пароля');
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (isFormValid()) {
