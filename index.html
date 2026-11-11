@@ -18,7 +18,19 @@
 
       <div class="field">
         <label for="password">Пароль</label>
-        <input type="password" id="password" name="password" placeholder="Минимум 8 символов">
+        <div class="password-input">
+          <input type="password" id="password" name="password" placeholder="Минимум 8 символов" autocomplete="new-password">
+          <button type="button" class="password-toggle" id="togglePassword" aria-label="Показать пароль" aria-controls="password" aria-pressed="false" title="Показать пароль">
+            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a15.7 15.7 0 0 1-3.1 3.9M6 6.5C3.4 8.4 2 12 2 12s3.5 7 10 7c1.4 0 2.8-.3 4-.9"/>
+              <path d="M10 10a3 3 0 0 0 4 4"/>
+            </svg>
+          </button>
+        </div>
         <div class="strength-meter">
           <div class="strength-bar" id="strengthBar"></div>
         </div>
@@ -28,7 +40,19 @@
 
       <div class="field">
         <label for="confirmPassword">Повторите пароль</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль">
+        <div class="password-input">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" autocomplete="new-password">
+          <button type="button" class="password-toggle" id="toggleConfirmPassword" aria-label="Показать подтверждение пароля" aria-controls="confirmPassword" aria-pressed="false" title="Показать подтверждение пароля">
+            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a15.7 15.7 0 0 1-3.1 3.9M6 6.5C3.4 8.4 2 12 2 12s3.5 7 10 7c1.4 0 2.8-.3 4-.9"/>
+              <path d="M10 10a3 3 0 0 0 4 4"/>
+            </svg>
+          </button>
+        </div>
         <span class="error" id="confirmError"></span>
       </div>
 
